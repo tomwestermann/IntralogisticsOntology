@@ -60,6 +60,16 @@
     
 
 
+    <!-- http://www.hsu-ifa.de/ontologies/T4CPS-GTP#customerOrderProducesArticle -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#customerOrderProducesArticle">
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#CustomerOrder"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#Article"/>
+        <rdfs:comment>Describes which kind of article is being produced by a CustomerOrder</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.hsu-ifa.de/ontologies/T4CPS-GTP#hasRecipeProcedure -->
 
     <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#hasRecipeProcedure">
