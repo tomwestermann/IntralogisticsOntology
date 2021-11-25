@@ -1,0 +1,477 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.hsu-ifa.de/ontologies/ISA88.01#"
+     xml:base="http://www.hsu-ifa.de/ontologies/ISA88.01"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#consistsOfOperation -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#consistsOfOperation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#UnitProcedure"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#Operation"/>
+        <rdfs:comment>Denotes that an Operation is part of a UnitProcedure.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#consistsOfPhase -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#consistsOfPhase">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#Operation"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#Phase"/>
+        <rdfs:comment>Denotes that a Phase is part of an Operation.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#consistsOfUnitProcedure -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#consistsOfUnitProcedure">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#RecipeProcedure"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#UnitProcedure"/>
+        <rdfs:comment>Denotes that a UnitProcedure is part of a RecipeProcedure.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#containsArea -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#containsArea">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#Site"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#Area"/>
+        <rdfs:comment>Denotes that an area is part of a site.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#containsControlModule -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#containsControlModule">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#ControlModule"/>
+                    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#EquipmentModule"/>
+                    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessCell"/>
+                    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#Unit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ControlModule"/>
+        <rdfs:comment>Denotes that a control module is part of a process cell, an equipment module or of another control module.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#containsEquipmentModule -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#containsEquipmentModule">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#EquipmentModule"/>
+                    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessCell"/>
+                    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#Unit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#EquipmentModule"/>
+        <rdfs:comment>Denotes that an equipment module is part of a unit, a process cell or of another equipment module.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#containsProcessCell -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#containsProcessCell">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#Area"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessCell"/>
+        <rdfs:comment>Denotes that a process cell is part of an area.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#containsSite -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#containsSite">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#Enterprise"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#Site"/>
+        <rdfs:comment>Denotes that a site is part of an enterprise.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#containsUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#containsUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessCell"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#Unit"/>
+        <rdfs:comment>Denotes that a unit is part of a process cell.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#executesProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#executesProcess">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#Area"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#executesProcessAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#executesProcessAction">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#EquipmentModule"/>
+                    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessCell"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessAction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#executesProcessOperation -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#executesProcessOperation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessCell"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessOperation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#executesProcessStage -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#executesProcessStage">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessCell"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessStage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#isRealizedInProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#isRealizedInProcess">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#RecipeProcedure"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#isRealizedInProcessAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#isRealizedInProcessAction">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#Phase"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessAction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#isRealizedInProcessOperation -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#isRealizedInProcessOperation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#Operation"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessOperation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#isRealizedInProcessStage -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#isRealizedInProcessStage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#UnitProcedure"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessStage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#Area -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#Area">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#PhysicalModelEntities"/>
+        <rdfs:comment>An area is a physical, geographical, or logical grouping determined by the site.  It may contain process cells, units, equipment modules, and control modules.  The boundaries of an area are usually based on organizational or business criteria as opposed to technical criteria.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#ControlModule -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#ControlModule">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#PhysicalModelEntities"/>
+        <rdfs:comment>A control module is typically a collection of sensors, actuators, other control modules, and associated processing equipment that, from the point of view of control, is operated as a single entity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#Enterprise -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#Enterprise">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#PhysicalModelEntities"/>
+        <rdfs:comment>An enterprise is a collection of one or more sites. It may contain sites, areas, process cells, units, equipment modules, and control modules.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#EquipmentModule -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#EquipmentModule">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#PhysicalModelEntities"/>
+        <rdfs:comment>An equipment module can carry out a finite number of specific minor processing activities such as dosing and weighing.  It combines all necessary physical processing and control equipment required to perform those activities.  It is usually centered on a piece of processing equipment, such as a filter.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#Operation -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#Operation">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProceduralControlModelTypes"/>
+        <rdfs:comment>An describes a larger processing sequence, that transforms an input from one state to another. An operation consists of an ordered set of functions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#Phase -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#Phase">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProceduralControlModelTypes"/>
+        <rdfs:comment>A Phase is the smalles element of the procedural control. It defines a single process control task (e.g. heating a product, add a catalyst).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#PhysicalModelEntities -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#PhysicalModelEntities"/>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#ProceduralControlModelTypes -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#ProceduralControlModelTypes"/>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#Process -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#Process">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessModelEntities"/>
+        <rdfs:comment>A process is a set of chemical, physical or biological activities for alteration, transportation or storage of physical matter or energy. It consists of an ordered set of process stages.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessAction -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessAction">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessModelEntities"/>
+        <rdfs:comment>A ProcessAction describes small individual steps in a processing procedure, that together make up a ProcessOperation. Examples for this might me addind a substance or heating up a mixture.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessCell -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessCell">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#PhysicalModelEntities"/>
+        <rdfs:comment>A process cell contains all of the units, equipment modules, and control modules required to make one or more batches. A process cell is a logical grouping of equipment that includes the equipment required for production of one or more batches. It defines the span of logical control of one set of process equipment within an area.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessModelEntities -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessModelEntities"/>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessOperation -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessOperation">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessModelEntities"/>
+        <rdfs:comment>ProcessOperations describe larges processing activities, that usually cause a chemical or physical change in the processed substances.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessStage -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessStage">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessModelEntities"/>
+        <rdfs:comment>A ProcessStage is part of a Process that is executed independently from other ProcessStages. It consits of an ordered set of ProcessOperations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#RecipeProcedure -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#RecipeProcedure">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProceduralControlModelTypes"/>
+        <rdfs:comment>A RecipeProcedure is the highest level in the ProceduralControlModule. It describes the execution of an extensive production operation (e.g. the production of a batch).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#Site -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#Site">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#PhysicalModelEntities"/>
+        <rdfs:comment>A site is a physical, geographical, or logical grouping determined by the enterprise.  It may contain areas, process cells, units, equipment modules, and control modules.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#Unit -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#Unit">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#PhysicalModelEntities"/>
+        <rdfs:comment>A unit is made up of equipment modules and control modules.  The modules that make up the unit may be configured as part of the unit or may be acquired temporarily to carry out specific tasks. One or more major processing activities — such as react, crystallize, and make a solution — can be conducted in a unit.  It combines all necessary physical processing and control equipment. This standard presumes that the unit does not operate on more than one batch at the same time</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/ISA88.01#UnitProcedure -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#UnitProcedure">
+        <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/ISA88.01#ProceduralControlModelTypes"/>
+        <rdfs:comment>A UnitProcedure describes a continuous production sequence in a process cell. It consists of an ordered set of operations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#Area"/>
+            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#ControlModule"/>
+            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#Enterprise"/>
+            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#EquipmentModule"/>
+            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessCell"/>
+            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#Site"/>
+            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#Unit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#Operation"/>
+            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#Phase"/>
+            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#RecipeProcedure"/>
+            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#UnitProcedure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#Process"/>
+            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessAction"/>
+            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessOperation"/>
+            <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/ISA88.01#ProcessStage"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

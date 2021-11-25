@@ -7,10 +7,12 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/westermann/ontologies/2021/2/T4CPS_GTP">
+    <owl:Ontology rdf:about="http://www.hsu-ifa.de/ontologies/T4CPSOntology">
+        <owl:versionIRI rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPSOntology/0.1"/>
         <owl:imports rdf:resource="http://www.hsu-ifa.de/ontologies/DINEN61360"/>
         <owl:imports rdf:resource="http://www.hsu-ifa.de/ontologies/VDI2206"/>
         <owl:imports rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682"/>
+        <owl:imports rdf:resource="http://www.hsu-ifa.de/ontologies/MaterialAllocation/0.1"/>
     </owl:Ontology>
     
 
@@ -26,9 +28,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/westermann/ontologies/2021/2/T4CPS_GTP#hasStructuralRealization -->
+    <!-- http://www.hsu-ifa.de/ontologies/T4CPSOntology#hasStructuralRealization -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/westermann/ontologies/2021/2/T4CPS_GTP#hasStructuralRealization">
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/T4CPSOntology#hasStructuralRealization">
         <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#TechnicalResource"/>
         <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/VDI2206#System"/>
     </owl:ObjectProperty>
@@ -46,18 +48,27 @@
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/VDI2206#Energy -->
+    <!-- http://www.hsu-ifa.de/ontologies/MaterialAllocation#Product -->
 
-    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI2206#Energy">
-        <owl:equivalentClass rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#Energy"/>
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/MaterialAllocation#Product">
+        <owl:equivalentClass rdf:resource="http://www.hsu-ifa.de/ontologies/VDI2206#Product"/>
+        <owl:equivalentClass rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#Product"/>
     </rdf:Description>
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/VDI2206#Information -->
+    <!-- http://www.hsu-ifa.de/ontologies/VDI2206#BasicSystem -->
 
-    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI2206#Information">
-        <owl:equivalentClass rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#Information"/>
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI2206#BasicSystem">
+        <owl:equivalentClass rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#Process"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/VDI2206#Energy -->
+
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI2206#Energy">
+        <owl:equivalentClass rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#Energy"/>
     </rdf:Description>
     
 
@@ -76,9 +87,9 @@
     
 
 
-    <!-- http://www.hsu-ifa.de/ontologies/VDI3682#Information -->
+    <!-- http://www.hsu-ifa.de/ontologies/VDI3682#Process -->
 
-    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI3682#Information"/>
+    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI3682#Process"/>
     
 
 
