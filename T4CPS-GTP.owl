@@ -70,6 +70,16 @@
     
 
 
+    <!-- http://www.hsu-ifa.de/ontologies/T4CPS-GTP#hasDeliveryOrder -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#hasDeliveryOrder">
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#CustomerOrder"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#DeliveryOrder"/>
+        <rdfs:comment>Describes to which CustomerOrder a DeliveryOder belongs.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.hsu-ifa.de/ontologies/T4CPS-GTP#hasRecipeProcedure -->
 
     <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#hasRecipeProcedure">
@@ -145,6 +155,17 @@
     <!-- http://www.hsu-ifa.de/ontologies/T4CPS-GTP#OrderProperties -->
 
     <owl:DatatypeProperty rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#OrderProperties"/>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/T4CPS-GTP#hasExpectedDeliveryDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#hasExpectedDeliveryDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#OrderProperties"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#DeliveryOrder"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Describes, when a DeliveryOder is expected to be fulfilled.</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
@@ -273,6 +294,7 @@
 
     <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#DeliveryOrder">
         <rdfs:subClassOf rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#Order"/>
+        <rdfs:comment>Describes a DeliveryOder including information about actual delivery date and target delivery date, target quantity and other information.</rdfs:comment>
     </owl:Class>
     
 

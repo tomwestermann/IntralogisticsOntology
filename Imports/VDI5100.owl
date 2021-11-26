@@ -311,6 +311,8 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#CustomerOrder"/>
+                    <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#DeliveryOrder"/>
                     <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI5100#I:DI"/>
                     <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI5100#I:DR"/>
                     <rdf:Description rdf:about="http://www.hsu-ifa.de/ontologies/VDI5100#I:FS"/>
@@ -349,6 +351,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/T4CPS-GTP#CustomerOrder -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#CustomerOrder"/>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/T4CPS-GTP#DeliveryOrder -->
+
+    <owl:Class rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#DeliveryOrder"/>
     
 
 
