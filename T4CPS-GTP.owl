@@ -31,11 +31,24 @@
     <!-- http://www.hsu-ifa.de/ontologies/T4CPS-GTP#assignedToProductionOrder -->
 
     <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#assignedToProductionOrder">
+        <owl:inverseOf rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#assignedToTechnicalResource"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#TechnicalResource"/>
         <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#ProductionOrder"/>
         <rdfs:comment>Describes, which Technical Resource is assigned to a ProductionOrder</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/T4CPS-GTP#assignedToTechnicalResource -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#assignedToTechnicalResource">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#ProductionOrder"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#TechnicalResource"/>
+        <rdfs:comment>Describes that a ProductionOrder is assigned to a Technical Resource.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -63,6 +76,8 @@
     <!-- http://www.hsu-ifa.de/ontologies/T4CPS-GTP#customerOrderProducesArticle -->
 
     <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#customerOrderProducesArticle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#CustomerOrder"/>
         <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#Article"/>
         <rdfs:comment>Describes which kind of article is being produced by a CustomerOrder</rdfs:comment>
@@ -73,6 +88,8 @@
     <!-- http://www.hsu-ifa.de/ontologies/T4CPS-GTP#hasDeliveryOrder -->
 
     <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#hasDeliveryOrder">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#CustomerOrder"/>
         <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#DeliveryOrder"/>
         <rdfs:comment>Describes to which CustomerOrder a DeliveryOder belongs.</rdfs:comment>
@@ -100,6 +117,18 @@
         <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#ProductionOrder"/>
         <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#Customer"/>
         <rdfs:comment>Describes, which customer a productionOrder is for.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hsu-ifa.de/ontologies/T4CPS-GTP#isForCustomerOrder -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#isForCustomerOrder">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#Process"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#CustomerOrder"/>
+        <rdfs:comment>Describes which CustomerOrder a Process is for.</rdfs:comment>
     </owl:ObjectProperty>
     
 
