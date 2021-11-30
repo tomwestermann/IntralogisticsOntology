@@ -133,6 +133,18 @@
     
 
 
+    <!-- http://www.hsu-ifa.de/ontologies/T4CPS-GTP#isPartOfProductionOrder -->
+
+    <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#isPartOfProductionOrder">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hsu-ifa.de/ontologies/VDI3682#Process"/>
+        <rdfs:range rdf:resource="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#ProductionOrder"/>
+        <rdfs:comment>Describes, that a Process is part of a ProductionOrder</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.hsu-ifa.de/ontologies/T4CPS-GTP#productionOrderProducesArticle -->
 
     <owl:ObjectProperty rdf:about="http://www.hsu-ifa.de/ontologies/T4CPS-GTP#productionOrderProducesArticle">
